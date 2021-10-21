@@ -1,0 +1,65 @@
+<div *ngIf="(isUserLoggedIn | async); then authenticatedUser else guest"></div>
+<ng-template #authenticatedUser>
+    <div *ngIf="(isAdmin | async); then admin else user"></div>
+    <ng-template #admin>
+        <mat-toolbar color="primary">
+            <span class="appName">FRIENDS BOOK</span>
+            <span class="spacer"></span>
+            <a mat-button routerLink="/dashboard">
+                <b>home</b>
+            </a>
+            <a mat-button routerLink="/users">
+                <b>users</b>
+            </a>
+            <a mat-button routerLink="/network">
+                <b>network</b>
+            </a>
+            <a mat-button routerLink="/friends">
+                <b>friends</b>
+            </a>
+            <a mat-button routerLink="/settings">
+                <b>settings</b>
+            </a>
+            <button type="submit" mat-raised-button color="primary" class="logout-btn" (click)="onLogoutClick()">
+                <b>logout</b>
+            </button>
+        </mat-toolbar>
+    </ng-template>
+
+    <ng-template #user>
+        <mat-toolbar color="primary">
+            <span class="appName">FRIENDS BOOK</span>
+            <span class="spacer"></span>
+            <a mat-button routerLink="/dashboard">
+                <b>home</b>
+            </a>
+            <a mat-button routerLink="/network">
+                <b>network</b>
+            </a>
+            <a mat-button routerLink="/friends">
+                <b>friends</b>
+            </a>
+            <a mat-button routerLink="/settings">
+                <b>settings</b>
+            </a>
+            <button type="submit" mat-raised-button color="primary" class="logout-btn" (click)="onLogoutClick()">
+                <b>logout</b>
+            </button>
+        </mat-toolbar>
+    </ng-template>
+</ng-template>
+
+<ng-template #guest>
+    <mat-toolbar color="primary" class="fixed-header">
+        <span class="appName">FRIENDS BOOK</span>
+        <span class="spacer"></span>
+        <a mat-button routerLink="/register">
+            <b>register</b>
+        </a>
+        <a mat-button routerLink="/login">
+            <b>login</b>
+        </a>
+    </mat-toolbar>
+</ng-template>
+
+<router-outlet></router-outlet>
