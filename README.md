@@ -33,8 +33,3 @@ Below are the technical specifications, will to be used in application developme
 5.	IDE	- Visual Studio Code
 6.	Database - MongoDB
 
-## Further help
-
-You will need to execute back-end app as well which contain all the REST API calls required for this application. Backend application is available here - https://github.com/AnilVishvkarma2015/nodejs-fb-app which is developed in Node JS with MongoDB database.
-
-This application is hosted on cloud and can be accessed at https://angular8-fb-app.herokuapp.com
