@@ -1,5 +1,5 @@
 {
-  "name": "angular8-fb-app",
+  "name": "angular8-friendsbook-app",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
@@ -13,7 +13,7 @@
     "node": "10.16.0",
     "npm": "6.9.0"
   },
-  "author": "Anil Vishvkarma",
+  "author": "Soumyajit Mandal",
   "private": true,
   "dependencies": {
     "@angular/animations": "^8.2.14",
